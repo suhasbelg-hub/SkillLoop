@@ -80,6 +80,18 @@
         </configuration>
       </plugin>
 
+      <!-- Convenience runner: mvn exec:java launches com.skillloop.Main by default.
+           Override the class with -Dexec.mainClass=... and pass tool options with
+           -Dexec.args=... (for example the DbSetupTool option "all"). -->
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>3.5.0</version>
+        <configuration>
+          <mainClass>${exec.mainClass}</mainClass>
+        </configuration>
+      </plugin>
+
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-jar-plugin</artifactId>

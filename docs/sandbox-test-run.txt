@@ -1,0 +1,93 @@
+SkillLoop - sandbox test run (NOT produced by Maven/JUnit)
+Date: 2026-10-25 10:47 UTC
+
+Compiler : ECJ 3.46.100 (Eclipse Compiler for Java), -source/-target 24
+Runtime  : openjdk version "25.0.2" 2026-01-20 LTS
+Note     : Maven Central is not reachable from the authoring sandbox, so the
+           real JUnit 5 jars could not be downloaded. The tests were executed with a
+           minimal local stand-in for org.junit.jupiter.api.Assertions/Assumptions
+           (test sources are unchanged and use the real JUnit 5 API).
+
+=== main sources ===
+main compile: 0 errors
+
+=== test sources ===
+test compile: 0 errors
+
+=== test execution ===
+Discovered 21 test classes
+---------------------------------------------------------------
+AchievementIT
+[TestEnvironment] MySQL is not reachable - database tests are skipped.
+  [SKIP] 2 test(s) - No MySQL server available - configure config/application.properties to run this test.
+AdminIT
+  [SKIP] 8 test(s) - No MySQL server available - configure config/application.properties to run this test.
+AnalyticsIT
+  [SKIP] 3 test(s) - No MySQL server available - configure config/application.properties to run this test.
+AuthIT
+  [SKIP] 8 test(s) - No MySQL server available - configure config/application.properties to run this test.
+BookingIT
+  [SKIP] 9 test(s) - No MySQL server available - configure config/application.properties to run this test.
+CreditWalletIT
+  [SKIP] 7 test(s) - No MySQL server available - configure config/application.properties to run this test.
+GroupSessionIT
+  [SKIP] 3 test(s) - No MySQL server available - configure config/application.properties to run this test.
+LeaderboardIT
+  [SKIP] 3 test(s) - No MySQL server available - configure config/application.properties to run this test.
+PersistenceIT
+  [SKIP] 4 test(s) - No MySQL server available - configure config/application.properties to run this test.
+ResourceIT
+  [SKIP] 3 test(s) - No MySQL server available - configure config/application.properties to run this test.
+ReviewIT
+  [SKIP] 4 test(s) - No MySQL server available - configure config/application.properties to run this test.
+SkillMatchingIT
+  [SKIP] 7 test(s) - No MySQL server available - configure config/application.properties to run this test.
+AppConfigTest
+  [PASS] Booking date strings are parsed with the documented pattern
+  [PASS] Default connection settings point to a local MySQL instance
+  [PASS] Credit configuration can be overridden through system properties
+  [PASS] The configuration never exposes the database password
+CreditsPolicyTest
+  [PASS] All supported durations have a proportional price
+  [PASS] A 30 minute session costs 10 credits and a 60 minute session costs 20
+  [PASS] Ledger references are unique per session and per purpose
+  [PASS] The starter grant is a bounded, one-time, configurable amount
+  [PASS] Unsupported durations are rejected
+DatabaseScriptTest
+  [PASS] The schema declares primary keys, foreign keys, unique keys and CHECK constraints
+  [PASS] schema.sql contains no DROP TABLE, DROP DATABASE, TRUNCATE or DELETE FROM statement
+  [PASS] Every table is created with IF NOT EXISTS so the script is re-runnable
+  [PASS] seed.sql is optional demo data and is also non-destructive
+  [PASS] The views cover JOIN, GROUP BY, HAVING and aggregate functions
+InputValidatorTest
+  [PASS] Only the supported session durations may be booked
+  [PASS] Text fields reject the angle brackets that could break the UI
+  [PASS] Invalid emails are rejected
+  [PASS] Name, department and semester rules are enforced
+  [PASS] Ratings must be between 1 and 5
+  [PASS] The registration form collects every problem at once
+  [PASS] URLs are validated, empty URLs become null
+  [PASS] Valid college emails are accepted and normalised to lower case
+LeaderboardScoreTest
+  [PASS] The wallet balance is not part of the ranking
+  [PASS] A teacher with verified sessions scores higher than one without
+  [PASS] The formula follows the documented weights
+  [PASS] Scores are capped at the documented maximum of 100 points
+MatchingWeightsTest
+  [PASS] The documented maximum score is 100 points
+  [PASS] Proficiency weights follow the documented order
+  [PASS] Reciprocity is the strongest single signal
+PasswordUtilTest
+  [PASS] A hashed password can be verified with the correct plaintext
+  [PASS] Every hash uses a different salt, so identical passwords hash differently
+  [PASS] Malformed or empty stored hashes never crash the verification
+  [PASS] Weak passwords are rejected with a clear reason
+SourceSecurityTest
+  [PASS] Every data access class prepares its statements
+  [PASS] No source file creates a plain java.sql.Statement
+  [PASS] The example configuration only contains placeholders
+  [PASS] The real configuration file is not part of the repository
+  [PASS] No credential is hard-coded in the sources
+  [PASS] The Swing layer never contains SQL
+---------------------------------------------------------------
+Tests run: 100, passed: 39, failed: 0, skipped: 61
