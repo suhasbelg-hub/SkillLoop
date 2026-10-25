@@ -1,0 +1,23 @@
+# ---------------------------------------------------------------------------
+#  SkillLoop - local database configuration (TEMPLATE)
+#
+#  Copy this file to  config/application.properties  and fill in your own
+#  values. The real file is git-ignored, so your credentials never end up in
+#  the repository or in a submitted ZIP.
+#
+#      copy src\main\resources\config\application.properties.example config\application.properties
+#
+#  Alternative (no file needed): set the environment variables
+#      SKILLLOOP_DB_URL, SKILLLOOP_DB_USER, SKILLLOOP_DB_PASSWORD
+# ---------------------------------------------------------------------------
+
+skillloop.db.url=jdbc:mysql://localhost:3306/skillloop?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+skillloop.db.user=skillloop_app
+skillloop.db.password=CHANGE_ME
+skillloop.db.driver=com.mysql.cj.jdbc.Driver
+
+# Credit economy
+skillloop.credits.per.hour=20
+skillloop.credits.starter.enabled=true
+skillloop.credits.starter.amount=20
+skillloop.credits.admin.max=100
